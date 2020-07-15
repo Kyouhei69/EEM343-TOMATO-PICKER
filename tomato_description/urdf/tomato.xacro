@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+
+<robot name="tomato" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find tomato_description)/urdf/links_joints.xacro" />
+
+
+    <!-- BGN ARM 0-->
+    <m_link_box name="base_link"
+              origin_rpy="0 0 0" origin_xyz="0 0 0.25"
+              mass="10024"
+              ixx="170.667" ixy="0" ixz="0"
+              iyy="170.667" iyz="0"
+              izz="170.667"
+              size="2 3 0.5" />
+    
+    <m_joint name="base_link__link_01" type="revolute"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 -1 0.5"
+           parent="base_link" child="link_01"
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+   
+    <m_link_mesh name="link_01"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.35 -0.35 0"
+              mass="17.78"
+              ixx="8.68" ixy="0" ixz="0"
+              iyy="6.98" iyz="0"
+              izz="5.98"
+              meshfile="package://tomato_description/meshes/Link_1.STL"
+              meshscale="0.001 0.001 0.001"/>
+
+    <m_joint name="link_01__link_02" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 0.44"
+           parent="link_01" child="link_02"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />
+
+    <m_link_mesh name="link_02"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.30 -0.25 -0.25"
+              mass="10"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_2.STL"
+              meshscale="0.001 0.001 0.001"/>
+
+    <m_joint name="link_02__link_03" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 1.12"
+           parent="link_02" child="link_03"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />
+
+    <m_link_mesh name="link_03"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.15 -0.10 -0.15"
+              mass="10"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_3.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+    <m_joint name="link_03__link_04" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 0.64"
+           parent="link_03" child="link_04"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />    
+
+    <m_link_mesh name="link_04"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.09 -0.10 -0.07"
+              mass="10"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_4.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+    <m_joint name="link_04__link_05" type="revolute"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 -0.01 0.8"
+           parent="link_04" child="link_05"
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+
+    <m_link_mesh name="link_05"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.1 -0.2 0"
+              mass="10"
+              ixx="4.167" ixy="0" ixz="0"
+              iyy="4.167" iyz="0"
+              izz="4.167"
+              meshfile="package://tomato_description/meshes/Link_5.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+ <!--END ARM 0-->
+
+ <!--BGN ARM 1-->
+
+  
+    <m_joint name="base_link__link_11" type="revolute"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 1 0.5"
+           parent="base_link" child="link_11"
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+   
+    <m_link_mesh name="link_11"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.35 -0.35 0"
+              mass="17.78"
+              ixx="8.68" ixy="0" ixz="0"
+              iyy="6.98" iyz="0"
+              izz="5.98"
+              meshfile="package://tomato_description/meshes/Link_1.STL"
+              meshscale="0.001 0.001 0.001"/>
+
+    <m_joint name="link_11__link_12" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 0.44"
+           parent="link_11" child="link_12"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />
+
+    <m_link_mesh name="link_12"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.30 -0.25 -0.25"
+              mass="0.1"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_2.STL"
+              meshscale="0.001 0.001 0.001"/>
+
+    <m_joint name="link_12__link_13" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 1.12"
+           parent="link_12" child="link_13"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />
+
+    <m_link_mesh name="link_13"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.15 -0.10 -0.15"
+              mass="1"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_3.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+    <m_joint name="link_13__link_14" type="revolute"
+           axis_xyz="0 1 0"
+           origin_rpy="0 0 0" origin_xyz="0 0 0.64"
+           parent="link_13" child="link_14"
+           limit_e="1000" limit_l="-1.57" limit_u="1.57" limit_v="0.5" />    
+
+    <m_link_mesh name="link_14"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.09 -0.10 -0.07"
+              mass="0.1"
+              ixx="12.679" ixy="0" ixz="0"
+              iyy="12.679" iyz="0"
+              izz="0.651"
+              meshfile="package://tomato_description/meshes/Link_4.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+    <m_joint name="link_14__link_15" type="revolute"
+           axis_xyz="0 0 1"
+           origin_rpy="0 0 0" origin_xyz="0 -0.01 0.8"
+           parent="link_14" child="link_15"
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+
+    <m_link_mesh name="link_15"
+              origin_rpy="1.57 0 1.57" origin_xyz="-0.1 -0.2 0"
+              mass="0.1"
+              ixx="4.167" ixy="0" ixz="0"
+              iyy="4.167" iyz="0"
+              izz="4.167"
+              meshfile="package://tomato_description/meshes/Link_5.STL"
+              meshscale="0.001 0.001 0.001"/> 
+
+    <!--END ARM 1-->
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        </plugin>
+    </gazebo>
+
+</robot>

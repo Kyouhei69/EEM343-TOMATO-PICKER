@@ -1,0 +1,1 @@
+controller_joint_names: [base_link__link_01,link_01__link_02,link_02__link_03,link_03__link_04,link_04__link_05,base_link__link_1,link_11__link_12,link_12__link_13,link_13__link_14,link_14__link_15]
